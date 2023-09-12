@@ -11,8 +11,8 @@
 ;--------------------------------
 ;Lets add the plugin and include directories from SVN since they already have what we need
 
-!addincludedir ${SVN_ITRACK_TRUNK_DIR}\Include
-!addplugindir ${SVN_ITRACK_TRUNK_DIR}\Plugins
+!addincludedir "$EXEDIR\Include"
+!addplugindir "$EXEDIR\Include\Plugins"
 
 ;--------------------------------
 ;Includes
