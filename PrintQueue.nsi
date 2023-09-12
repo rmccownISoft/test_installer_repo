@@ -10,7 +10,6 @@
 
 ;--------------------------------
 ;Lets add the plugin and include directories from SVN since they already have what we need
-MessageBox MB_OK "Adding include directory: $EXEDIR\Include"
 !addincludedir .\Include
 ;!addincludedir "$EXEDIR\Include"
 ;!addplugindir "$EXEDIR\Include\Plugins"
