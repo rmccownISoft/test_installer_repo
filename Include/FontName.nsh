@@ -38,80 +38,80 @@
 Function TranslateFontName
   !define Index "LINE-${__LINE__}"
 
-  StrCmp $LANGUAGE 1063 0 End-1063 ; Lithuanian (by Vytautas Krivickas)
-    Push "Neteisinga šrifto versija"
-    Push "Planines bylos adreso klaida: %u"
-    Push "Planines bylos sukurimo klaida: %u"
-    Push "Neteisingas bylos dydis: %u"
-    Push "Neteisinga bylos rankena: %u"
-    Push "FontName %s ijungiamoji byla i NSIS"
-    goto ${Index}
-  End-1063:
+ ; StrCmp $LANGUAGE 1063 0 End-1063 ; Lithuanian (by Vytautas Krivickas)
+ ;   Push "Neteisinga Å¡rifto versija"
+ ;   Push "Planines bylos adreso klaida: %u"
+ ;   Push "Planines bylos sukurimo klaida: %u"
+ ;   Push "Neteisingas bylos dydis: %u"
+ ;   Push "Neteisinga bylos rankena: %u"
+ ;   Push "FontName %s ijungiamoji byla i NSIS"
+ ;   goto ${Index}
+ ; End-1063:
 
   StrCmp $LANGUAGE 1031 0 End-1031 ; German (by Jan T. Sott)
     Push "Falsche Fontversion"
     Push "MappedFile Addressfehler: %u"
     Push "MappedFile Fehler: %u"
-    Push "Ungültige Dateigrösse: %u"
-    Push "Ungültiges Dateihandle %u"
-    Push "FontName %s Plugin für NSIS"
+    Push "UngÃ¼ltige DateigrÃ¶sse: %u"
+    Push "UngÃ¼ltiges Dateihandle %u"
+    Push "FontName %s Plugin fÃ¼r NSIS"
     goto ${Index}
   End-1031:
 
   StrCmp $LANGUAGE 1037 0 End-1037 ; Hebrew (by kichik)
-    Push "âøñú ëåôï ùâåéä"
-    Push "ùâéàú ëúåáú ÷åáõ îîåôä: %u"
-    Push "ùâéàú ÷åáõ îîåôä: %u"
-    Push "âåãì ÷åáõ ìà çå÷é: %u"
-    Push "éãéú ÷åáõ ìà çå÷éú %u"
+    Push "Ã¢Ã¸Ã±Ãº Ã«Ã¥Ã´Ã¯ Ã¹Ã¢Ã¥Ã©Ã¤"
+    Push "Ã¹Ã¢Ã©Ã Ãº Ã«ÃºÃ¥Ã¡Ãº Ã·Ã¥Ã¡Ãµ Ã®Ã®Ã¥Ã´Ã¤: %u"
+    Push "Ã¹Ã¢Ã©Ã Ãº Ã·Ã¥Ã¡Ãµ Ã®Ã®Ã¥Ã´Ã¤: %u"
+    Push "Ã¢Ã¥Ã£Ã¬ Ã·Ã¥Ã¡Ãµ Ã¬Ã  Ã§Ã¥Ã·Ã©: %u"
+    Push "Ã©Ã£Ã©Ãº Ã·Ã¥Ã¡Ãµ Ã¬Ã  Ã§Ã¥Ã·Ã©Ãº %u"
     Push "FontName %s plugin for NSIS"
     goto ${Index}
   End-1037:
 
   StrCmp $LANGUAGE 1046 0 End-1046 ; Portuguese (Brazil) (by deguix)
-    Push "Versão de Fonte Errada"
-    Push "Erro de Endereço do ArquivoMapeado: %u"
+    Push "VersÃ£o de Fonte Errada"
+    Push "Erro de EndereÃ§o do ArquivoMapeado: %u"
     Push "Erro do ArquivoMapeado: %u"
-    Push "Tamanho de arquivo inválido: %u"
-    Push "Manuseio de arquivo inválido %u"
+    Push "Tamanho de arquivo invÃ¡lido: %u"
+    Push "Manuseio de arquivo invÃ¡lido %u"
     Push "FontName %s plugin para NSIS"
     goto ${Index}
   End-1046:
 
   StrCmp $LANGUAGE 1025 0 End-1025 ; Arabic (by asdfuae)
-    Push "ÅÕÏÇÑ ÇáÎØ ÎÇØÆ"
-    Push "ÎØÇÁ ÚäæÇä ÎÑíØÉÇáãáİ: %u"
-    Push "ÎØÇÁ ÎÑíØÉ Çáãáİ: %u"
-    Push "ÍÌã Çáãáİ ÛíÑÕÍíÍ: %u"
-    Push "ãÚÇáÌ Çáãáİ ÛíÑ ÕÍíÍ %u"
-    Push "ãŞÈÓ ÇÓã ÇáÎØ %s áäÓíÓ"
+    Push "Ã…Ã•ÃÃ‡Ã‘ Ã‡Ã¡ÃÃ˜ ÃÃ‡Ã˜Ã†"
+    Push "ÃÃ˜Ã‡Ã ÃšÃ¤Ã¦Ã‡Ã¤ ÃÃ‘Ã­Ã˜Ã‰Ã‡Ã¡Ã£Ã¡Ã: %u"
+    Push "ÃÃ˜Ã‡Ã ÃÃ‘Ã­Ã˜Ã‰ Ã‡Ã¡Ã£Ã¡Ã: %u"
+    Push "ÃÃŒÃ£ Ã‡Ã¡Ã£Ã¡Ã Ã›Ã­Ã‘Ã•ÃÃ­Ã: %u"
+    Push "Ã£ÃšÃ‡Ã¡ÃŒ Ã‡Ã¡Ã£Ã¡Ã Ã›Ã­Ã‘ Ã•ÃÃ­Ã %u"
+    Push "Ã£ÃÃˆÃ“ Ã‡Ã“Ã£ Ã‡Ã¡ÃÃ˜ %s Ã¡Ã¤Ã“Ã­Ã“"
     goto ${Index}
   End-1025:
 
   StrCmp $LANGUAGE 1028 0 End-1028 ; Chinese (Traditional) by Kii Ali <kiiali@cpatch.org>
-    Push "¿ù»~ªº¦r«¬ª©¥»"
-    Push "¹ïÀ³ÀÉ®×¦ì§}¿ù»~: %u"
-    Push "¹ïÀ³ÀÉ®×¿ù»~: %u"
-    Push "µL®ÄªºÀÉ®×¤j¤p: %u"
-    Push "µL®ÄªºÀÉ®×¬`µ{: %u"
-    Push "¥Î©ó NSIS ªº¦r«¬¦WºÙ %s ´¡¥ó"
+    Push "Â¿Ã¹Â»~ÂªÂºÂ¦rÂ«Â¬ÂªÂ©Â¥Â»"
+    Push "Â¹Ã¯Ã€Â³Ã€Ã‰Â®Ã—Â¦Ã¬Â§}Â¿Ã¹Â»~: %u"
+    Push "Â¹Ã¯Ã€Â³Ã€Ã‰Â®Ã—Â¿Ã¹Â»~: %u"
+    Push "ÂµLÂ®Ã„ÂªÂºÃ€Ã‰Â®Ã—Â¤jÂ¤p: %u"
+    Push "ÂµLÂ®Ã„ÂªÂºÃ€Ã‰Â®Ã—Â¬`Âµ{: %u"
+    Push "Â¥ÃÂ©Ã³ NSIS ÂªÂºÂ¦rÂ«Â¬Â¦WÂºÃ™ %s Â´Â¡Â¥Ã³"
     goto ${Index}
   End-1028:
 
   StrCmp $LANGUAGE 2052 0 End-2052 ; Chinese (Simplified) by Kii Ali <kiiali@cpatch.org>
-    Push "´íÎóµÄ×ÖÌå°æ±¾"
-    Push "Ó³ÉäÎÄ¼şµØÖ·´íÎó: %u"
-    Push "Ó³ÉäÎÄ¼ş´íÎó: %u"
-    Push "ÎŞĞ§µÄÎÄ¼ş´óĞ¡: %u"
-    Push "ÎŞĞ§µÄÎÄ¼ş±ú³Ì: %u"
-    Push "ÓÃÓÚ NSIS µÄ×ÖÌåÃû³Æ %s ²å¼ş"
+    Push "Â´Ã­ÃÃ³ÂµÃ„Ã—Ã–ÃŒÃ¥Â°Ã¦Â±Â¾"
+    Push "Ã“Â³Ã‰Ã¤ÃÃ„Â¼Ã¾ÂµÃ˜Ã–Â·Â´Ã­ÃÃ³: %u"
+    Push "Ã“Â³Ã‰Ã¤ÃÃ„Â¼Ã¾Â´Ã­ÃÃ³: %u"
+    Push "ÃÃÃÂ§ÂµÃ„ÃÃ„Â¼Ã¾Â´Ã³ÃÂ¡: %u"
+    Push "ÃÃÃÂ§ÂµÃ„ÃÃ„Â¼Ã¾Â±ÃºÂ³ÃŒ: %u"
+    Push "Ã“ÃƒÃ“Ãš NSIS ÂµÃ„Ã—Ã–ÃŒÃ¥ÃƒÃ»Â³Ã† %s Â²Ã¥Â¼Ã¾"
     goto ${Index}
   End-2052:
 
   StrCmp $LANGUAGE 1036 0 End-1036 ; French by evilO/Olive
     Push "Version de police incorrecte"
-    Push "Erreur d'adresse du fichier mappé : %u"
-    Push "Erreur de fichier mappé : %u"
+    Push "Erreur d'adresse du fichier mappÃ© : %u"
+    Push "Erreur de fichier mappÃ© : %u"
     Push "Taille de fichier invalide : %u"
     Push "Descripteur de fichier invalide %u"
     Push "FontName %s plugin pour NSIS"
@@ -119,22 +119,22 @@ Function TranslateFontName
   End-1036:
 
   StrCmp $LANGUAGE 1034 0 End-1034 ; Spanish (traditional) by Cecilio
-    Push "Versión del font incorrecta"
-    Push "Error de dirección de archivo mapeado: %u"
+    Push "VersiÃ³n del font incorrecta"
+    Push "Error de direcciÃ³n de archivo mapeado: %u"
     Push "Error de archivo mapeado: %u"
-    Push "Tamaño de archivo erroneo: %u"
+    Push "TamaÃ±o de archivo erroneo: %u"
     Push "Manipulador de archivo erroneo: %u"
     Push "Plugin de NSIS para FontName %s "
     goto ${Index}
   End-1034:
 
   StrCmp $LANGUAGE 1071 0 End-1071 ; Macedonian by Sasko Zdravkin <wingman2083@yahoo.com>
-    Push "Ïîãğåøíà âåğçè¼à íà Ôîíòîò"
-    Push "ÌàïèğàíàòàÄàòîòåêà Ãğåøêà íà àäğåñàòà: %u"
-    Push "ÌàïèğàíàòàÄàòîòåêà Ãğåøêà: %u"
-    Push "Ïîãğåøíà ãîëåìèíà íà äàòîòåêàòà: %u"
-    Push "Ïîãğåøíî ğàêóâàœå ñî äàòîòåêàòà: %u"
-    Push "FontName %s ïëóãèí çà NSIS"
+    Push "ÃÃ®Ã£Ã°Ã¥Ã¸Ã­Ã  Ã¢Ã¥Ã°Ã§Ã¨Â¼Ã  Ã­Ã  Ã”Ã®Ã­Ã²Ã®Ã²"
+    Push "ÃŒÃ Ã¯Ã¨Ã°Ã Ã­Ã Ã²Ã Ã„Ã Ã²Ã®Ã²Ã¥ÃªÃ  ÃƒÃ°Ã¥Ã¸ÃªÃ  Ã­Ã  Ã Ã¤Ã°Ã¥Ã±Ã Ã²Ã : %u"
+    Push "ÃŒÃ Ã¯Ã¨Ã°Ã Ã­Ã Ã²Ã Ã„Ã Ã²Ã®Ã²Ã¥ÃªÃ  ÃƒÃ°Ã¥Ã¸ÃªÃ : %u"
+    Push "ÃÃ®Ã£Ã°Ã¥Ã¸Ã­Ã  Ã£Ã®Ã«Ã¥Ã¬Ã¨Ã­Ã  Ã­Ã  Ã¤Ã Ã²Ã®Ã²Ã¥ÃªÃ Ã²Ã : %u"
+    Push "ÃÃ®Ã£Ã°Ã¥Ã¸Ã­Ã® Ã°Ã ÃªÃ³Ã¢Ã Å“Ã¥ Ã±Ã® Ã¤Ã Ã²Ã®Ã²Ã¥ÃªÃ Ã²Ã : %u"
+    Push "FontName %s Ã¯Ã«Ã³Ã£Ã¨Ã­ Ã§Ã  NSIS"
     goto ${Index}
   End-1071:
 
