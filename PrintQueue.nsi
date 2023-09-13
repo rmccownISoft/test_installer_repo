@@ -3,7 +3,8 @@
 
 ;You'll want to change this to be the root of your SVN trunk directory
 !define SVN_ITRACK_TRUNK_DIR "C:\SVN\General\Installer"
-!define REPORT_QUEUE_SOURCE_DIR "C:\Users\Robert McCown\Documents\ReportQueueSource"
+;!define REPORT_QUEUE_SOURCE_DIR "C:\Users\Robert McCown\Documents\ReportQueueSource"
+!define REPORT_QUEUE_SOURCE_DIR ..\
 
 ; this should work but doesn't
 ;!define REPORT_QUEUE_SOURCE_DIR "$DOCUMENTS\ReportQueueSource\"
@@ -139,6 +140,8 @@ Section "Print Queue Python Script" SEC01
         BringToFront
         
         SectionIn RO ;Make this section read only(ie. required so it can't be unselected on the components page)
+	DetailPrint "Debug install dir: $INSTDIR"
+	DetailPrint "Debug rq dir: ${REPORT_QUEUE_SOURCE_DIR}"
 
         SetOutPath "$INSTDIR"
 		File "${REPORT_QUEUE_SOURCE_DIR}\ReportQueueService.bat"
