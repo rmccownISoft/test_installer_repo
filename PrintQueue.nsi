@@ -39,8 +39,11 @@
 ;---------------
 ;Directories
 
-!define ROOT_FILES_DIR "C:\ISoft\Installer"
-!define COMPONENTS_DIR "C:\installerComponents"
+!define ROOT_FILES_DIR ..\components
+!define COMPONENTS_DIR ..\components
+
+
+
 !define CONFIG_PAGE_INI_NAME "PrintQueueConfigPage.ini"
 ;!define MYSQL_CONNECTOR_PYTHON_DIR "C:\Users\Robert McCown\Documents\Installers\Connector"
 
