@@ -55,7 +55,7 @@
 Name "${PRODUCT_NAME}"
 
 ;Where the compiled exe will be written to.
-OutFile "${ROOT_FILES_DIR}\complete\${PRODUCT_NAME}Setup.exe"
+OutFile "${ROOT_FILES_DIR}\${PRODUCT_NAME}Setup.exe"
 
 ; Do a CRC check when initializing setup.
 CRCCheck On
