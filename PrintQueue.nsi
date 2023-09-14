@@ -295,11 +295,11 @@ Section "InstallMicrosoftRedistributablePackages" SEC02
 		; 	ExecWait '"msiexec" /i "$TEMP\vcredist_x86_2013.exe"'
 		; ${EndIf}
         ;Microsoft Visual C++ 2010 x86 redistributable for ODBC driver (32 bit version)
-	    File "${COMPONENTS_DIR}\InstallerRedistributables\vcredist_x86_2010.exe"
+	    File "${COMPONENTS_DIR}\vcredist_x86_2010.exe"
 	    ExecWait "$TEMP\vcredist_x86_2010.exe /passive /norestart"
 
         ;Microsoft Visual C++ 2013 x86 redistributable for ODBC driver
-		File "${COMPONENTS_DIR}\InstallerRedistributables\vcredist_x86_2013.exe"
+		File "${COMPONENTS_DIR}\vcredist_x86_2013.exe"
 		ExecWait "$TEMP\vcredist_x86_2013.exe /install /passive /norestart"
 
 
