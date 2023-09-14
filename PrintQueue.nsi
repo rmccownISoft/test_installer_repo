@@ -158,8 +158,8 @@ Section "Print Queue Python Script" SEC01
         ;File "${REPORT_QUEUE_SOURCE_DIR}\reportqueueservice.log"
 
         ;unzip reportqueuediagnostics
-        SetOutPath "$INSTDIR\reportqueuediagnostics"
-        File /nonfatal /a /r "${REPORT_QUEUE_SOURCE_DIR}\reportqueuediagnostics\"
+        ;SetOutPath "$INSTDIR\reportqueuediagnostics"
+        ;File /nonfatal /a /r "${REPORT_QUEUE_SOURCE_DIR}\reportqueuediagnostics\"
 
         ;unzip nssm
         SetOutPath "$INSTDIR\nssm-2.24"	
