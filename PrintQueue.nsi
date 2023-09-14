@@ -306,7 +306,6 @@ Section "InstallMicrosoftRedistributablePackages" SEC02
 SectionEnd
 
 	
-;Section "MySQL ODBC Driver" SEC05
 Section "MySQL ODBC Driver" SEC03
         BringToFront
 
@@ -371,14 +370,13 @@ Section "MySQL ODBC Driver" SEC03
 SectionEnd
 
 ;Section "Scheduled Task or Windows Service" SEC04
-Section "Run ReportQueue Diagnostics" SEC04
-    ExecShell "runas" "$InstDir\reportqueuediagnostics\reportqueuediagnostics.exe"
+;Section "Run ReportQueue Diagnostics" SEC04
+;    ExecShell "runas" "$InstDir\reportqueuediagnostics\reportqueuediagnostics.exe"
 
-SectionEnd
+;SectionEnd
 
-Section "Scheduled Task or Windows Service" SEC05
+Section "Scheduled Task or Windows Service" SEC04
 
-    ;ExecShell "" "$InstDir\taskschd.msc"
     ;ExecShell "" "$InstDir\ReportQueueService.bat"
     ExecWait "$InstDir\ReportQueueService.bat"
 
