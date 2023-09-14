@@ -2,7 +2,7 @@
 ;Dont forget to change config version if ReportQueue is updated
 
 ;You'll want to change this to be the root of your SVN trunk directory
-'!define SVN_ITRACK_TRUNK_DIR "C:\SVN\General\Installer"
+!define SVN_ITRACK_TRUNK_DIR "C:\SVN\General\Installer"
 !define SVN_ITRACK_TRUNK_DIR ..\components
 !define REPORT_QUEUE_SOURCE_DIR ..\
 
