@@ -390,7 +390,7 @@ SectionEnd
     !insertmacro MUI_DESCRIPTION_TEXT ${SEC02} "Installs dependencies for ${PRODUCT_NAME} and its components."
     !insertmacro MUI_DESCRIPTION_TEXT ${SEC03} "Installs drivers used by ${PRODUCT_NAME} to make a connection to the server and access information."
     !insertmacro MUI_DESCRIPTION_TEXT ${SEC04} "Runs ${PRODUCT_NAME} test script."
-    !insertmacro MUI_DESCRIPTION_TEXT ${SEC05} "Creates ${PRODUCT_NAME} service to run."
+    ;!insertmacro MUI_DESCRIPTION_TEXT ${SEC05} "Creates ${PRODUCT_NAME} service to run."
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;Get the input
